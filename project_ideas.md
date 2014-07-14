@@ -1,4 +1,3 @@
-#Ideas
 ##Python
 - WordCloudURL
 	- Input is a URL, output is an imgur link to the wordcloud.
@@ -11,3 +10,7 @@
 
 ##ML
 - Kaggle (http://www.kaggle.com/competitions)
+
+##Projects
+- Grocery expense tracker.
+- 30 day challenge iOS app.
