@@ -14,3 +14,4 @@
 ##Projects
 - Grocery expense tracker.
 - 30 day challenge iOS app.
+- Generate priority encoder table, given number of bits.
