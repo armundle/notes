@@ -11,6 +11,10 @@
     + Off-by one errors.
     + Null termination errors.
     + String truncation
+* String memory management strategies:
+    + Caller allocates, caller frees - prevents leaks.
+    + Callee allocates, caller frees - ensures sufficient memory is available.
+    + Callee allocates, caller frees - most secure, only available in C++.
 
 ### Review
 * UTF-8
