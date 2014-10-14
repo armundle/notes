@@ -19,3 +19,18 @@
 ### Review
 * UTF-8
 * Wide char
+
+#Chapter 4
+## Mitigation Strategies
+* Set pointers to ```NULL``` for a system with garbage collection.
+* For a system without garbage collection, deallocated the referenced data and then set the pointer to ```NULL```.
+* Memory freed mulitple times after ```NULL``` does not have any consequence.
+* Use consistent memory management conventions: In C++, perforam allocation in constructors and deallocation in destructors.
+* Account for multiple constructor situation in the destructor.
+* phkmalloc.
+* Randomize allocated memory addresses; harder to exploit; adds peformance overhead.
+* Guard option in OpenBSD.
+* jemalloc designed after phkmalloc emphasize scalability and fragmentation behavior.
+* Static Analysis.
+* Runtime analysis tools used during testing, e.g. Purify.
+* Valgrind, Insure++, Microsoft Application Verifier.
