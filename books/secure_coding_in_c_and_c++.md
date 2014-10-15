@@ -34,3 +34,10 @@
 * Static Analysis.
 * Runtime analysis tools used during testing, e.g. Purify.
 * Valgrind, Insure++, Microsoft Application Verifier.
+
+#Chapter 5
+## Integer Data Types
+* ```CHAR_BIT``` from ```<limits.h>``` gives the number of bits in a byte.
+* Unused bits - padding bits.
+* Number of non-padding bits is called the width; ```w(type)```.
+* Precision is the number of bits excluding sign and padding.
