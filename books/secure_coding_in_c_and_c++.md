@@ -41,3 +41,10 @@
 * Unused bits - padding bits.
 * Number of non-padding bits is called the width; ```w(type)```.
 * Precision is the number of bits excluding sign and padding.
+
+#Chapter 6 : Concurrency
+## Race Condition
+* Two more more threads producing different behavior, depending on which thread completes first.
+* Race window protected by locking mechanism is known as critical section.
+* Note: re-visit the atomic example.
+* ```volatile``` keyword is nothing more than a directive to the compile to not optimize it out. Some platforms do provide memory fencing around it but this is highly platform specific.
