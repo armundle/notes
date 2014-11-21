@@ -48,3 +48,18 @@
 * Race window protected by locking mechanism is known as critical section.
 * Note: re-visit the atomic example.
 * ```volatile``` keyword is nothing more than a directive to the compile to not optimize it out. Some platforms do provide memory fencing around it but this is highly platform specific.
+## Mitigation Strategies
+* POSIX threading library (pthreads) provide multithreading support.
+* ```as-if``` specification allows the compiler to re-order program execution, thereby making a multithreaded program not thread-safe. (e.g., Dekker's example).
+* Hardware visibility can also make a pogram thread-unsafe. e.g. Each thread being executed by a separate processor, and each processor with one level of cache RAM.
+* Use happens-before relation with synchronization primitives to guarantee ordering.
+* Mutex provides simple lock and unlock mechanism.
+* Lock Guard is RAII applied to mutex; it ensures that a mutex doesn't stay in a locked state if the function exits without unlocking it.
+* Atomic operations: These are indivisible; an atomic operation must run to completion before anything else can access the memory used by the operation.
+* In addition to atomic operations, fences can be used to prevent data races. These, however, might not prevent race conditions.
+* Semaphores have a counter which increments on initialization. It is useful for managing pools of resources or coordinating multiple threads that use a single resource.
+* Message Queues (TODO)
+* Thread Role Analysis.
+* Immutable Data Structures (TODO)
+* Thread-safe functions.
+* Re-entrant functions: They are thread-safe, but not vice-versa.
