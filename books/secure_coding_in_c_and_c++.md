@@ -63,3 +63,10 @@
 * Immutable Data Structures (TODO)
 * Thread-safe functions.
 * Re-entrant functions: They are thread-safe, but not vice-versa.
+## Mitigation Pitfalls
+* Deadlocks - can be caused by improper locking, not releasing a lock.
+* Prematurely Releasing a Lock.
+* Excessive lock contention can lead to poor performance.
+* ABA problem - commonly encountered when implementing lock-free data structures.
+* Spinlock - efficient only when the waiting time to acquire a lock is short by avoiding the costly context switch time. To avoid wasting CPU cycles, put the thread to sleep or yield control to other threads during the while loop.
+* 
