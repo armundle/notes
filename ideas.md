@@ -10,6 +10,7 @@
 
 ##ML
 - Kaggle (http://www.kaggle.com/competitions)
+- Data science application to social sciences.
 
 ##Projects
 - Grocery expense tracker.
